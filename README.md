@@ -24,3 +24,10 @@ sudo apt install python3-rpi.gpio python3-spidev python3-pip python3-pil python3
 sudo pip3 install pidi-display-st7789 --break-system-packages
 
 sudo reboot
+
+wget https://github.com/bakegoodz/simple-pirate-mp3/raw/refs/heads/main/mp3.py
+nano mp3.py
+# Change Directory to where your mp3 files are
+crontab -e
+@reboot sudo /usr/bin/python3 /home/user/mp3.py
+#Set this this to your path of mp3.py
